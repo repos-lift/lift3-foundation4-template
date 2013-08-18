@@ -1,0 +1,6 @@
+[submodule "src/main/resources/styles/sass/foundation"]
+	path = src/main/resources/styles/sass/foundation
+	url = git@github.com:zurb/foundation.git
+[submodule "src/main/resources/html/h5bp"]
+	path = src/main/resources/html/h5bp
+	url = https://github.com/h5bp/html5-boilerplate
