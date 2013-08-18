@@ -10,7 +10,9 @@ An updated Lift starter template using:
 
 You must have [Compass][3] installed and available from the commandline.
 
-When first cloning this repository you need to also run `submodule-update.sh` to [fetch][6] Foundation and HTML5 Boilerplate submodules.
+When first cloning this repository you need to also run the included 
+`submodule-install.sh` script to [fetch][6] Foundation and HTML5 Boilerplate 
+submodules.
 
 
 [1]:    http://liftweb.net/
