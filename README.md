@@ -10,9 +10,12 @@ An updated Lift starter template using:
 
 You must have [Compass][3] installed and available from the commandline.
 
+When first cloning this repository you need to also run `submodule-update.sh` to [fetch][6] Foundation and HTML5 Boilerplate submodules.
+
 
 [1]:    http://liftweb.net/
 [2]:    http://foundation.zurb.com/  
 [3]:    http://compass-style.org/ 
 [4]:    https://github.com/Shadowfiend/sbt-resource-management    
 [5]:    http://html5boilerplate.com/
+[6]:    http://git-scm.com/book/en/Git-Tools-Submodules
