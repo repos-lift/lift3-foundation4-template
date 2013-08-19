@@ -39,6 +39,17 @@ libraryDependencies ++= {
 
 //-- sbt-managed-resources plugin config (SASS, etc) --\\
 
+// The following four lines not required for resources:compile-sass, but are required for 
+// resources:copy-scripts and other deploy related commands.
+// https://github.com/Shadowfiend/sbt-resource-management/pull/17
+awsAccessKey := "YOUR_ACCESS_KEY"
+
+awsSecretKey := "YOUR_SECRET_KEY"
+
+awsS3Bucket  := "YOUR_S3_BUCKET"
+
+seq(resourceManagementSettings :_*)
+
 //source directory for SASS
 //styleDirectories in ResourceCompile := Seq(file("src/main/webapp/*/styles")) // default
 styleDirectories in ResourceCompile := Seq(file("src/main/resources/styles/sass/*.scss"))
