@@ -1,4 +1,4 @@
-Source of compiled/compressed Coffee Script files.  If you wish to use a different JS preprocessor/compiler, you will need to modify [sbt-resource-management plugin][1] to do so.
+Custom/project Coffee Script source files.  If you wish to use a different JS preprocessor/compiler, you will need to modify [sbt-resource-management plugin][1] to do so.
 
 
 

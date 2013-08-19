@@ -39,30 +39,27 @@ libraryDependencies ++= {
 
 //-- sbt-managed-resources plugin config (SASS, etc) --\\
 
-// AWS keys currently required even if not using them, will change in upcoming version
-// https://github.com/Shadowfiend/sbt-resource-management/issues/8
-awsAccessKey := "YOUR_ACCESS_KEY"
-
-awsSecretKey := "YOUR_SECRET_KEY"
-
-awsS3Bucket  := "YOUR_S3_BUCKET"
-
-seq(resourceManagementSettings :_*)
-
+//source directory for SASS
 //styleDirectories in ResourceCompile := Seq(file("src/main/webapp/*/styles")) // default
 styleDirectories in ResourceCompile := Seq(file("src/main/resources/styles/sass/*.scss"))
 
+//source directory for JavaScripts
 //scriptDirectories in ResourceCompile := Seq(file("src/main/webapp/*/scripts")) // default
 scriptDirectories in ResourceCompile := Seq(file("src/main/resources/*/*.js"))
 
+//source directory for CoffeeScripts
 //coffeeScriptSources in ResourceCompile := Seq(file("src/main/webapp/**/*.coffee")) // default
 coffeeScriptSources in ResourceCompile := Seq(file("src/main/resources/*/*.coffee"))
 
+//target directory for command resources:copy-scripts
+//serving directory for all Javascript files (both original source JS and compiled CoffeeScript)
 //targetJavaScriptDirectory in ResourceCompile := file("target/scripts") // default
-targetJavaScriptDirectory in ResourceCompile := file("src/main/webapp/scripts/vendor")
+targetJavaScriptDirectory in ResourceCompile := file("src/main/webapp/scripts")
 
+//target directory for command resources:compile-coffee-script
 //compiledCoffeeScriptDirectory in ResourceCompile := file("target/compiled-coffee-script") // default
-compiledCoffeeScriptDirectory in ResourceCompile := file("src/main/webapp/scripts")
+compiledCoffeeScriptDirectory in ResourceCompile := file("src/main/resources/scripts/compiled")
 
+//target directory for command resources:compress-resources; resources:compress-scripts; resources:compress-styles
 //compressedTarget in ResourceCompile := file("target/compressed") // default
-compressedTarget in ResourceCompile := file("src/main/webapp/scripts/bin")
+compressedTarget in ResourceCompile := file("src/main/resources/scripts/compressed")
